@@ -1,0 +1,7 @@
+--check-leaks
+--colors
+--reporter spec
+--watchextensions tsx,ts
+ReactApp/test/**/*.ts
+ReactApp/test/**/*.tsx
+-r jsdom-global/register

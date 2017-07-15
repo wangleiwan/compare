@@ -1,0 +1,45 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mitel.uc.smb.mobile"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-sdk
+        android:minSdkVersion="25"
+        android:targetSdkVersion="25" />
+
+    <application
+      android:name=".MainApplication"
+      android:allowBackup="true"
+      android:label="@string/app_name"
+      android:icon="@mipmap/ic_launcher"
+      android:theme="@style/AppTheme">
+      <activity
+        android:name=".MainActivity"
+        android:launchMode="singleTask"
+        android:label="@string/app_name"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        android:windowSoftInputMode="adjustResize">
+        <meta-data
+            android:name="com.google.android.id.geo.API_KEY"
+            android:value="AIzaSyC45Er_LfAU6c10992A08cA63YV7bXwofI" />
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        <intent-filter android:label="ucsmb">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="ucsmb" android:host="validate" />
+        </intent-filter>
+      </activity>
+      <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="2da6db249844a2b14e1940ccfe49e48131b3618e" />
+    </application>
+
+</manifest>
